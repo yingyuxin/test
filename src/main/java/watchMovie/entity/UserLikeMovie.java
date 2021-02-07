@@ -5,15 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Calendar;
 
 @Entity
 @Data
-public class User {
-    private String name;
-    private String password;
+public class UserLikeMovie {
+    private Integer movieId;
+    private Integer userId;
+    private Calendar currentDate;     //用户标注为想看电影的日期
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    //public UserType userType;
-    private String type;     //要么manager，要么staff，要么user
 }
